@@ -16,19 +16,11 @@
 Explore the STL geometry in real time with OrbitControls, custom material shading, auto-rotation, and wireframe modes:
 ![Interactive 3D Viewer](images/screenshot_3d_viewer.png)
 
-### 2. Physical Product Prototype
-The fully assembled flower-shaped multi-coloured highlighter featuring 5 distinct highlighter caps and tips:
-![Physical Product Prototype](images/ref1.jpeg)
-
-### 3. Ergonomics & Scale (In-Hand Evaluation)
-Compact, rounded floral form contoured to fit comfortably into the palm during long study and reading sessions:
-![Prototype in Hand](images/ref2.jpeg)
-
-### 4. Modular Detachable Components
+### 2. Modular Detachable Components
 The 5 petal caps unclipped from the central ink reservoir base, demonstrating the quick-switch design:
 ![Detachable Modules](images/ref6.jpeg)
 
-### 5. CAD Assembly & Technical Drawings
+### 3. CAD Assembly & Technical Drawings
 Engineered in CAD with snap-fit retention tolerances to keep highlighter nibs airtight:
 | CAD 3D Model | Orthographic Projections |
 | :---: | :---: |
