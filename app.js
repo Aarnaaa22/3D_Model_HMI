@@ -118,6 +118,8 @@ function displayGeometry(geometry, label) {
   controls.maxDistance = radius * 5;
   controls.update();
   errorBox.hidden = true;
+  errorBox.style.display = "none";
+  errorBox.classList.remove("visible");
   setStatus("Ready · " + label);
 }
 
@@ -125,6 +127,8 @@ function loadModel(file) {
   currentModel = file;
   setStatus("Loading " + file + "…");
   errorBox.hidden = true;
+  errorBox.style.display = "none";
+  errorBox.classList.remove("visible");
   const loader = new STLLoader();
   loader.load("models/" + file, geometry => {
     displayGeometry(geometry, file);
@@ -139,11 +143,16 @@ function loadModel(file) {
     console.error(err);
     setStatus("Preview unavailable");
     errorBox.hidden = false;
+    errorBox.style.display = "flex";
+    errorBox.classList.add("visible");
   });
 }
 
 function loadFromFile(file) {
   setStatus("Loading " + file.name + "…");
+  errorBox.hidden = true;
+  errorBox.style.display = "none";
+  errorBox.classList.remove("visible");
   const reader = new FileReader();
   reader.onload = e => {
     try {
@@ -159,11 +168,15 @@ function loadFromFile(file) {
       console.error(parseErr);
       setStatus("Error parsing STL");
       errorBox.hidden = false;
+      errorBox.style.display = "flex";
+      errorBox.classList.add("visible");
     }
   };
   reader.onerror = () => {
     setStatus("Error reading file");
     errorBox.hidden = false;
+    errorBox.style.display = "flex";
+    errorBox.classList.add("visible");
   };
   reader.readAsArrayBuffer(file);
 }
